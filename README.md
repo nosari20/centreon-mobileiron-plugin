@@ -20,8 +20,7 @@
 
 * Sentry
     * TCP ping
-    * Core and Connector status (via status page)
-    * Certificates (Portal HTTPS and Client TLS)
+    * Certificate
     * SNMP
         * Storage
         * Memory
