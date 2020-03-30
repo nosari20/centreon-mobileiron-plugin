@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/badge/Version-1.0-red.svg)](https://shields.io/) [![made-with-python](https://img.shields.io/badge/Made%20with-Python%203.7-1f425f)](https://www.python.org/) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/nosari20/centreon-mobileiron-plugin/issues)
 
-# Supported appliances/services
+## Supported appliances/services
 
 * Core
     * TCP ping
