@@ -47,6 +47,7 @@
 ```bash
 $ cd /usr/lib/centreon/plugins/
 $ git clone https://github.com/nosari20/centreon-mobileiron-plugin mi
+$ pip3 install pysnmp cryptography requests
 ```
 ```bash
 python3 $CENTREONPLUGINS$mi/monitor_core.py
