@@ -314,7 +314,7 @@ if args.command == 'storage':
     for storage in result :
         
         hrStorageDescr = storage[hrStorageDescr_OID]
-        hrStorageAllocationUnits = int(storage[hrStorageAllocationUnits_OID])
+        hrStorageAllocationUnits = int(int(storage[hrStorageAllocationUnits_OID])/8)
         hrStorageSize = int(storage[hrStorageSize_OID]) * hrStorageAllocationUnits
         hrStorageUsed = int(storage[hrStorageUsed_OID]) * hrStorageAllocationUnits
         hrStorageUsedPercent = round(hrStorageUsed/hrStorageSize*100,1)
@@ -328,7 +328,6 @@ if args.command == 'storage':
         }
 
         
-
     warning_threshold = (args.warning if args.warning != None else 70)
     critical_threshold = (args.critical if args.critical != None else 90)
     exit_code = 0
@@ -340,11 +339,11 @@ if args.command == 'storage':
 
 
     perfdata = '\'/\'={}B;{};{};{};{};'.format(
-            hrStorageUsed,
-            round(warning_threshold*hrStorageSize/100),
-            round(critical_threshold*hrStorageSize/100),
+            storage_table['/']['hrStorageUsed'],
+            round(warning_threshold*storage_table['/']['hrStorageSize']/100),
+            round(critical_threshold*storage_table['/']['hrStorageSize']/100),
             0,
-            hrStorageSize)
+            storage_table['/']['hrStorageSize'])
 
     for hrStorageDescr in storage_table :
         if hrStorageDescr.startswith('/') and hrStorageDescr != '/' :
