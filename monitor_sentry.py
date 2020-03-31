@@ -262,7 +262,7 @@ if args.command == 'storage':
     for storage in result :
         
         hrStorageDescr = storage[hrStorageDescr_OID]
-        hrStorageAllocationUnits = int(int(storage[hrStorageAllocationUnits_OID]) / 8)
+        hrStorageAllocationUnits = int(int(storage[hrStorageAllocationUnits_OID]))
         hrStorageSize = int(storage[hrStorageSize_OID]) * hrStorageAllocationUnits
         hrStorageUsed = int(storage[hrStorageUsed_OID]) * hrStorageAllocationUnits
         hrStorageUsedPercent = round(hrStorageUsed/hrStorageSize*100,1)
