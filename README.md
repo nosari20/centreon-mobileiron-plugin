@@ -45,7 +45,11 @@
 
 ## Installation
 ```bash
-$ git clone https://github.com/nosari20/centreon-mobileiron-plugin
+$ cd /usr/lib/centreon/plugins/
+$ git clone https://github.com/nosari20/centreon-mobileiron-plugin mi
+```
+```bash
+python3 $CENTREONPLUGINS$mi/monitor_core.py
 ```
 
 ## Usage
