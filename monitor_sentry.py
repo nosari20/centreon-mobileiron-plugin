@@ -398,16 +398,11 @@ if args.command == 'cpu':
     critical_threshold = (args.critical if args.critical != None else 100)
   
     avg_load=0
-    perfdata  = '\'avg\'={}%;{};{};{};{};'.format(
-            int(avg_load),
-            round(warning_threshold),
-            round(critical_threshold),
-            0,
-            100)
-    index = 0
+    perfdata  = ''
+    index=0
     for cpu in result:
         avg_load += int(cpu[hrProcessorLoad_OID])
-        perfdata += '\'cpu{}\'={}%;{};{};{};{}'.format(
+        perfdata += '\'cpu{}\'={}%;{};{};{};{};'.format(
             index,
             cpu[hrProcessorLoad_OID],
             '',
@@ -416,6 +411,13 @@ if args.command == 'cpu':
             100)
         index += 1
     avg_load = avg_load/len(result)
+
+    perfdata  = '\'avg\'={}%;{};{};{};{};'.format(
+            int(avg_load),
+            round(warning_threshold),
+            round(critical_threshold),
+            0,
+            100) + perfdata
 
 
 
