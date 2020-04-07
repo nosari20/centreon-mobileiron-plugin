@@ -31,7 +31,11 @@
         * DNS
         * NTP
         * Connected devices
-
+* Devices
+    * Active devices
+    * Nom-complaint devices
+    * Quarantined devices
+    * Custom filter
 ## TODO
 
 * Device list count with filters (via API)
