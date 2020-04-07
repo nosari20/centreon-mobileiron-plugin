@@ -125,8 +125,4 @@ def mics_info(host: str, username:str, password:str, uri:str, method:str = 'GET'
     # Handle others errors
     except BaseException as err:
         return False, format(err)
-
-
-
-    
-
+###############################################################################################################

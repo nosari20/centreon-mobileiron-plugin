@@ -110,3 +110,4 @@ def snmp_table(host: str, oids: [str], version: int = 1, community: str = 'publi
 
     except BaseException as err:  
         return False, None, format(err)
+###############################################################################################################

@@ -14,7 +14,6 @@
 #################
 
 import requests
-import ssl
 import urllib3
 
 urllib3.disable_warnings()
