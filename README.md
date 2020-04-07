@@ -36,9 +36,10 @@
     * Nom-complaint devices
     * Quarantined devices
     * Custom filter
+
+    
 ## TODO
 
-* Device list count with filters (via API)
 * Device compliance
 * Connector monitoring
 * Cloud suport
