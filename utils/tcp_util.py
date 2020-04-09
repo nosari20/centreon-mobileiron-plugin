@@ -77,8 +77,4 @@ def tcp_ping(host: str, port: int, timeout: int = 1, packets: int = 20) -> (bool
 
     except BaseException as err:
         return False, -1, -1, -1, format(err)
-
-
-    
-
-
+###############################################################################################################

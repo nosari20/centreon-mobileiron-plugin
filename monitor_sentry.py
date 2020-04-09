@@ -525,7 +525,6 @@ if args.command == 'logging':
 
 
     json_res = json.loads(result)
-    #log_level = json.loads(json_res['asproxy'])
     sentry_log_enabled = (True if re.search(r'"enable":"(\w+)"',json_res['asproxy']).group(1) == 'true' else False)
     log_level = int(re.search(r'"verbosity":"level([0-9])"',json_res['asproxy']).group(1))
  
