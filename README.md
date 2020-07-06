@@ -33,7 +33,7 @@
         * Connected devices
 * Devices
     * Active devices
-    * Nom-complaint devices
+    * Non-compliant devices
     * Quarantined devices
     * Custom filter
 
